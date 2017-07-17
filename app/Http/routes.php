@@ -15,4 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//wyświetla wszystkie filmy
 Route::get('/videos', 'VideosController@index');
+
+//wyświetla film o podanym id
+Route::get('/videos/{id}', 'VideosController@show');

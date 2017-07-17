@@ -18,5 +18,13 @@ class VideosController extends Controller
     return view('videos.index')->with('videos', $videos);
   }
 
-
+  /**
+   * Wyświetlenie jednego filmu
+   */
+   public function show($id)
+   {
+     $video = Video::findOrFail($id);
+     return view('videos.show')->with('video', $video);
+   }
+   
 }
