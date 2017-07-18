@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Request;
 use App\Http\Requests;
+use App\Http\Requests\CreateVideoRequest;
 use App\Video;
 
 class VideosController extends Controller
@@ -38,15 +39,15 @@ class VideosController extends Controller
    /**
     * zapisuje nowy film do bazy danych
     */
-    public function store()
-    //public function store(CreateVideoRequest $request)
+    //public function store()
+    public function store(CreateVideoRequest $request)
     {
       // Obiekt klasy Request przechowuje wszystkie pola z formularza
-      $input = Request::all();
-      Video::create($input);
+      //$input = Request::all();
+      //Video::create($input);
 
       // aby walidacja formularza działała
-      #Video::create($request->all());
+      Video::create($request->all());
       //$video = new Video($request->all());
 
       //Auth::user()->video()->save($video);
