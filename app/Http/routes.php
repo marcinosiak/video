@@ -18,5 +18,11 @@ Route::get('/', function () {
 //wyświetla wszystkie filmy
 Route::get('/videos', 'VideosController@index');
 
+//zapisuje nowy film do bazy
+Route::post('/videos', 'VideosController@store');
+
+//wyświetla formularz dodawania nowego filmu
+Route::get('/videos/create', 'VideosController@create');
+
 //wyświetla film o podanym id
 Route::get('/videos/{id}', 'VideosController@show');
