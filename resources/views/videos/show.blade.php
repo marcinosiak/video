@@ -30,9 +30,9 @@
                 <span class="upper-label">Dodał</span>
                 {{-- <span class="video-author">{{ $video->user->name }}</span> --}}
                 <div class="edit-button">
-                    {{-- <a href="{{ action('VideosController@edit', $video->id) }}" class="btn btn-primary btn-lg">
+                    <a href="{{ action('VideosController@edit', $video->id) }}" class="btn btn-primary btn-lg">
                         Edytuj Video
-                    </a> --}}
+                    </a>
                 </div>
             </div>
 
