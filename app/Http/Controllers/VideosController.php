@@ -10,6 +10,13 @@ use Auth;
 
 class VideosController extends Controller
 {
+  
+  public function __construct()
+  {
+    $this->middleware('auth', ['only' => 'create']);
+    //$this->middleware('auth', ['except' => 'index']);
+  }
+
   /**
    * Wyświetlam listę wszystkich filmow
    * @return $videos [type] [description]
