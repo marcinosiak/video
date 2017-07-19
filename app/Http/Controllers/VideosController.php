@@ -55,4 +55,25 @@ class VideosController extends Controller
       return redirect('videos');
     }
 
+    /**
+     * Formularz edycji instniejącego rekordu
+     */
+    public function edit($id)
+    {
+      $video = Video::findOrFail($id);
+      return view('videos.edit')->with('video', $video);
+    }
+
+    /**
+     * Aktualizuje rekord w bazie
+     * int $id - identyfikator filmu
+     * CreateVideoRequest $request - przechowuje pola formularza w ktroym edytujemy zmiany
+     */
+    public function update($id, CreateVideoRequest $request)
+    {
+       $video = Video::findOrFail($id);
+       $video->update($request->all());
+       return redirect('videos');
+    }        
+
 }
