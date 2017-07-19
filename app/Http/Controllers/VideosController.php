@@ -6,6 +6,7 @@ use Request;
 use App\Http\Requests;
 use App\Http\Requests\CreateVideoRequest;
 use App\Video;
+use Auth;
 
 class VideosController extends Controller
 {
@@ -47,10 +48,10 @@ class VideosController extends Controller
       //Video::create($input);
 
       // aby walidacja formularza działała
-      Video::create($request->all());
-      //$video = new Video($request->all());
+      //Video::create($request->all());
+      $video = new Video($request->all());
 
-      //Auth::user()->video()->save($video);
+      Auth::user()->video()->save($video);
       //Session::flash('video_created', 'Twoj film został dodany');
       return redirect('videos');
     }
@@ -74,6 +75,6 @@ class VideosController extends Controller
        $video = Video::findOrFail($id);
        $video->update($request->all());
        return redirect('videos');
-    }        
+    }
 
 }
