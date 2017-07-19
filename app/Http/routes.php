@@ -28,3 +28,5 @@ Route::get('/', function () {
 // Route::get('/videos/{id}', 'VideosController@show');
 
 Route::resource('videos', 'VideosController');
+
+Route::auth();
