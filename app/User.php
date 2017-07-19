@@ -23,4 +23,13 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Relacja (na poziomie modelu) - użytkownik możebyć autorem wielu filmow
+     * @return [type] [description]
+     */
+    public function video()
+    {
+      return $this->hasMany('App\Video');
+    }    
 }

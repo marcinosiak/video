@@ -11,4 +11,14 @@ class Video extends Model
       'url',
       'description'
     ];
+
+    /**
+     * Relacja (na poziomie modelu) - film może mieć jednego autora
+     * @return [type] [description]
+     */
+    public function user()
+    {
+      return $this->belongsTo('App\User');
+    }
+        
 }
