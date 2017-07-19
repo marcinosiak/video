@@ -9,7 +9,8 @@ class Video extends Model
     protected $fillable = [
       'title',
       'url',
-      'description'
+      'description',
+      'user_id'
     ];
 
     /**
@@ -20,5 +21,5 @@ class Video extends Model
     {
       return $this->belongsTo('App\User');
     }
-        
+
 }

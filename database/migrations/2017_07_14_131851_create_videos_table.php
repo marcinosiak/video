@@ -20,7 +20,8 @@ class CreateVideosTable extends Migration
             $table->text('description');
             $table->timestamps();
 
-            
+            //powyższe pole klucza obcego user_id odwołuje się do pola id w tabeli users
+            $table->foreign('user_id')->references('id')->on('users');
         });
     }
 
