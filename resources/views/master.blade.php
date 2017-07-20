@@ -49,8 +49,8 @@
                 <ul class="nav navbar-nav">
                     <li><a href="/videos">Start</a></li>
                     <li><a href="/videos">Filmy</a></li>
-                    <li><a href="/contact">Kontakt</a></li>
-                    <li><a href="/about">O nas</a></li>
+                    <li><a href="/videos/create">Dodaj nowy film</a></li>
+
                 </ul>
 
                 <!-- Right Side Of Navbar -->

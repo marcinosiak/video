@@ -7,6 +7,7 @@ use App\Http\Requests;
 use App\Http\Requests\CreateVideoRequest;
 use App\Video;
 use Auth;
+use Session;
 
 class VideosController extends Controller
 {
