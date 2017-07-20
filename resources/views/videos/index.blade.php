@@ -5,6 +5,9 @@
     <h2>Najnowsze filmy</h2>
 </div>
 
+/**
+ * Odbieram i wyświetlam komunikaty z sesji VideoController
+ */
 @if (Session::has('video_created'))
   <div class="alert alert-succes card">
       {{ Session::get('video_created') }}

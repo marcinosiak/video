@@ -10,7 +10,7 @@ use Auth;
 
 class VideosController extends Controller
 {
-  
+
   public function __construct()
   {
     $this->middleware('auth', ['only' => 'create']);
@@ -59,7 +59,7 @@ class VideosController extends Controller
       $video = new Video($request->all());
 
       Auth::user()->video()->save($video);
-      //Session::flash('video_created', 'Twoj film został dodany');
+      Session::flash('video_created', 'Twój film został dodany');
       return redirect('videos');
     }
 
