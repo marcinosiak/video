@@ -19,11 +19,11 @@
             <div class="single-video-content">
                 <div class="categories">
                     <h4>Kategorie</h4>
-                    <span>
-                    <a href="">Webdesign</a>,&nbsp;
-                    <a href="">PHP</a>,&nbsp;
-                    <a href="">Angular</a>
-                    </span>
+                    <div class="categories">
+                      @foreach ($video->categories as $category)
+                        <a href="">{{ $category->name }},&nbsp;</a>
+                      @endforeach
+                    </div>
                 </div>
                 <h4>Pełny opis</h4>
                 <p>{{ $video->description }}</p>

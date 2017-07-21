@@ -21,4 +21,19 @@ class Video extends Model
       return $this->belongsTo('App\User');
     }
 
+    /**
+     * Film jest przypisany do wielu kategorii
+     */
+     public function categories()
+     {
+       return $this->belongsToMany('App\Category')->withTimestamps();
+     }
+
+     /**
+      * Lista wszystkich kategorii do ktorych dodany był film
+      */
+      public function getCategoryListAttribute()
+      {
+        return $this->categories->lists('id')->all();
+      }
 }
