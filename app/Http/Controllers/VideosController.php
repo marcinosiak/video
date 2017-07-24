@@ -9,6 +9,7 @@ use App\Video;
 use App\Category;
 use Auth;
 use Session;
+use View;
 
 class VideosController extends Controller
 {
@@ -25,8 +26,20 @@ class VideosController extends Controller
    */
   public function index()
   {
+    if(Auth::check())
+    {
+      $isLogged = "Wyloguj";
+      $authPath = "/logout";
+    }
+    else {
+      $isLogged = "Zaloguj";
+      $authPath = "/login";
+    }
+
     $videos = Video::latest()->get();
     return view('videos.index')->with('videos', $videos);
+    //return View::make('videos.index')->with('videos', $videos);
+    //return View::make('videos.index', array('videos' => $videos, 'isLogged' => $isLogged, 'authPath' => $authPath ));
   }
 
   /**

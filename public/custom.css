@@ -18,7 +18,7 @@ body {
 
 .site-content {
 	margin-top: 30px;
-	margin-bottom: 50px;	
+	margin-bottom: 50px;
 }
 
 .btn-primary,
@@ -42,7 +42,7 @@ a, .btn-link {
 
 /* Top navbar */
 .navbar-default {
-	background-color: #3F51B5;
+	background-color: #F86A02;
 	border: none;
 	box-shadow: 0px 0px 7px 0px #777;
 	border-radius: 0;
@@ -98,7 +98,7 @@ a, .btn-link {
 
 .card-content p {
 	color: #727272;
-}	
+}
 
 .upper-label {
 	margin-top: 15px;
@@ -228,7 +228,7 @@ a, .btn-link {
 
 /* Stopka */
 .site-footer {
-	background-color: #3F51B5;
+	background-color: #F86A02;
 	height: 80px;
     /*position: fixed;
     bottom: 0;

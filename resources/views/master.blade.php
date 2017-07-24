@@ -40,7 +40,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="#">
-                    SK - Laravel
+                    Laravel
                 </a>
             </div>
 
@@ -56,8 +56,15 @@
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
                     <!-- Authentication Links -->
-                        <li><a href="/login">Zaloguj</a></li>
-                        <li><a href="/register">Rejestracja</a></li>
+                    <li>
+                      @if (Auth::check())
+                        <a href="/logout">Wyloguj</a>
+                      @else
+                        <a href="/login">Zaloguj</a>
+                      @endif
+                    </li>
+                    <li><a href="/register">Rejestracja</a></li>
+
                 </ul>
             </div>
         </div>
@@ -79,7 +86,7 @@
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container">
-            <p>&copy; Strefa Kursów 2016</p>
+            <p>&copy; Marcin Osiak</p>
         </div>
     </footer>
 

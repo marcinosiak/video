@@ -26,7 +26,7 @@
               </div>
               <div class="card-content">
                   <a href="{{ url('videos', $video->id) }}">
-                      <h4>{{ $video->title }}</h4>
+                      <h4>{{ str_limit($video->title, $limit=39) }}</h4>
                   </a>
                   <p>{{ str_limit($video->description, $limit=80) }}</p>
                   <span class="upper-label">Dodał</span>
