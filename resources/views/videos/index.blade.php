@@ -28,7 +28,7 @@
                   <a href="{{ url('videos', $video->id) }}">
                       <h4>{{ $video->title }}</h4>
                   </a>
-                  <p>{{ $video->description }}</p>
+                  <p>{{ str_limit($video->description, $limit=80) }}</p>
                   <span class="upper-label">Dodał</span>
                   <span class="video-author">{{ $video->user->name }}</span>
               </div>

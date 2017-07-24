@@ -11,12 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 //wyświetla wszystkie filmy
-// Route::get('/videos', 'VideosController@index');
+Route::get('/', 'VideosController@index');
 
 //zapisuje nowy film do bazy
 // Route::post('/videos', 'VideosController@store');
